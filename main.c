@@ -4,14 +4,14 @@
 
 int 
 main(int argc, char* argv[]){
-
-const int len = strlen(argv[1]);
-argv[1][len] = '\0';
+	char str[3];
+	strcpy(str, argv[1]);
 	
-	if(strcmp(argv[1], "new")){
+	if(!strcmp(str, "new")){
 		printf("Enter new book's parameters:\n");
 		newbook();
 	}
+	
 	sort();
 	return 0;
 }
